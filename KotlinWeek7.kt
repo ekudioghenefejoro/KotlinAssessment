@@ -1,24 +1,13 @@
-//given a random non-negative number, you have to return the digits of this number within an array in reverse order. using kotling
+fun main(){
+    val arrayNumList: ArrayList<Int> = arrayListOf(25, 24, 23, 22, 21, 20, 19)
+    println(reverse(arrayNumList))
 
+}
 
-
-fun rearranged() {
-    var num2 = 123456789
-    var reversedOrder = 0
-
-    while (num2 != 0) {
-        val digit = num2 % 10
-        reversedOrder = reversedOrder * 10 + digit
-        num2 /= 10
+fun reverse (arrayNum: ArrayList<Int>): ArrayList<Int> {
+    val result: ArrayList<Int> = arrayListOf()
+    for (i: Int in arrayNum.size - 1 downTo  0) {
+        result.add (arrayNum[i])
     }
-
-    println("Reversed  Number: $reversedOrder")
-
+    return result
 }
-
-fun main() {
-    rearranged()
-
-}
-
-
